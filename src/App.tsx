@@ -52,11 +52,7 @@ export default function App() {
   return (
     <div className="m-0 h-screen overflow-auto p-0">
       <Hero handleSearch={handleSearch} />
-      {incompleteResults === true ? (
-        <p>null</p>
-      ) : (
-        <ViewArea data={receivedData} />
-      )}
+      <ViewArea data={receivedData} />
     </div>
   );
 }
