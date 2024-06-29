@@ -17,7 +17,7 @@ export default function App() {
   const getData = async (query: string) => {
     try {
       const response = await axios.get(
-        `http://api.github.com/search/repositories?q=${query}&per_page=10`,
+        `https://api.github.com/search/repositories?q=${query}&per_page=10`,
       );
       setReceivedData(response.data);
     } catch (err) {
