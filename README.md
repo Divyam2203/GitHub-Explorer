@@ -1,6 +1,10 @@
 # GitHub Explorer
 
 This is a web app built with React, TypeScript, and Tailwind CSS that allows you to search for GitHub repositories and view basic information about them.
+
+## Screenshot
+<img src="public\Screenshot 2024-06-30 012612.png">
+
 ## Features
 
 - Search for repositories or users by name
