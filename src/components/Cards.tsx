@@ -9,7 +9,7 @@ export default function Cards({ item }: any) {
                 {item.full_name}
               </h3>
               <div className="flex">
-                <div className="bg-slate-300 rounded-full">
+                <div className="rounded-full bg-slate-300">
                   <img
                     src={item.owner.avatar_url}
                     alt="avatar"

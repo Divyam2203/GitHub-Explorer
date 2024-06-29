@@ -12,8 +12,6 @@ export default function App() {
     items: [],
   });
 
-  let incompleteResults = true;
-
   const getData = async (query: string) => {
     try {
       const response = await axios.get(
@@ -35,20 +33,16 @@ export default function App() {
 
   useEffect(() => {
     let timerOut = setTimeout(() => {
-      //setHideDetails(true);
       if (inputString !== "") {
         console.log("fetching");
         getData(inputString as string);
-        //viewRef.current?.scrollIntoView();
       }
     }, 700);
     return () => {
-      //setHideDetails(false);
       clearTimeout(timerOut);
     };
   }, [inputString]);
-  incompleteResults = receivedData.incomplete_results;
-  //console.log(incompleteResults);
+
   return (
     <div className="m-0 h-screen overflow-auto p-0">
       <Hero handleSearch={handleSearch} />

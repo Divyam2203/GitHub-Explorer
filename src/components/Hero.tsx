@@ -1,18 +1,18 @@
-
-
-export default function Hero({handleSearch}:any) {
-  
-  
-  
+export default function Hero({ handleSearch }: any) {
   return (
-    <div className="relative h-96  ">
+    <div className="relative h-96">
       <div className="flex h-full w-full flex-col items-center justify-center gap-4 px-3 md:px-0">
         <h1 className="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-        Github Explorer
+          Github Explorer
         </h1>
-        <p className="text-gray-300">Explore Github Repositories and Projects</p>
+        <p className="text-gray-300">
+          Explore Github Repositories and Projects
+        </p>
 
-        <form className="relative w-full max-w-lg rounded-lg border border-gray-200 p-3" onSubmit={handleSearch}>
+        <form
+          className="relative w-full max-w-lg rounded-lg border border-gray-200 p-3"
+          onSubmit={handleSearch}
+        >
           <input
             type="text"
             id="text"
