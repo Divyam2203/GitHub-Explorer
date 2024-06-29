@@ -1,13 +1,25 @@
 export default function Cards({ item }: any) {
   return (
     <>
-      <div className="my-4 ">
-        <a href={item.html_url} target="_blank" >
-          <div className="relative mx-auto flex max-w-md flex-col space-y-3 rounded-xl border border-white bg-white p-3 shadow-lg duration-200 hover:scale-105 hover:shadow-xl md:max-w-3xl md:flex-row md:space-x-5 md:space-y-0 cursor-pointer">
+      <div className="my-4">
+        <a href={item.html_url} target="_blank">
+          <div className="relative mx-auto flex max-w-md cursor-pointer flex-col space-y-3 rounded-xl border border-white bg-white p-3 shadow-lg duration-200 hover:scale-105 hover:shadow-xl md:max-w-3xl md:flex-row md:space-x-5 md:space-y-0">
             <div className="flex w-full flex-col space-y-2 bg-white p-3 md:w-4/6">
               <h3 className="truncate text-xl font-black text-gray-800 md:text-3xl">
                 {item.full_name}
               </h3>
+              <div className="flex">
+                <div className="bg-slate-300 rounded-full">
+                  <img
+                    src={item.owner.avatar_url}
+                    alt="avatar"
+                    className="size-6 rounded-full"
+                  />
+                </div>
+                <p className="ml-2 text-sm font-bold text-gray-600">
+                  {item.owner.login}
+                </p>
+              </div>
               <p className="text-base text-gray-500 md:text-lg">
                 {item.description}
               </p>
